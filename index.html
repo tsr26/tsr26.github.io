@@ -1,16 +1,101 @@
-<!DOCTYPE html>
 <html lang="en" dir="ltr">
-  <head> <h1> Welcome to our Tethys App </h1>
+  <head> <h1> Welcome to the Infiltration Calculator </h1>
     <meta charset="utf-8">
     <title></title>
   </head>
   <body>
     <img SRC = "https://factfinder.census.gov/help/en/geo-overlay-map-basic-tools.jpg" ALT = "picture of map">
-    <INPUT TYPE=“radio” NAME=“name” VALUE=“data1”>Metric
-      <p><INPUT TYPE=“checkbox” NAME=“name” VALUE=“data2”>Detailed Results</p>
-        <p>Cut Depth: <INPUT TYPE="text" NAME="CutDepth(m)" VALUE="" SIZE=20>
-<BR><BR>
-  </p>
+    <p>Zoom to the approximate location of your build site and draw a polygon to represent a building footprint. Draw the building footprint by clicking directly on the map and close the polygon with a right-click. Finally, enter a cut depth (with "m" for meters or "ft" for feet), choose the appropriate units, and press the calculate button to determine the infiltration.</p>     
+ <form class="form1" action="">
+            <label for="cutDepth" class="cut-depth">Cut Depth:</label>
+            <input id="cutdepth" type="text">  
+
+            <label for="English">English Units</label>
+   <input id="English" type="radio">
+  <label
+for="Metric">Metric Units</label>
+   <input id="Metric" type="radio">
+
+   <p><label for="infiltration">Infiltration</label></p>
+            <input id="email" type="email">
+
+            <button>Calculate Results</button>
+        </form>
 <p>Please send us an e-mail at genericgmailuser@gmail.com if you encounter any issues with this web app.</p>
   </body>
 </html>
+
+* {
+  box-sizing: border-box;
+}
+form {
+  padding: 1em;
+  background: #f9f9f9;
+  border: 3px solid #c1c1c1;
+  margin-top: 2rem;
+  max-width: 600px;
+  margin-left: 0px;
+  margin-right: auto;
+  padding: 1em;
+}
+form input {
+  margin-bottom: 1rem;
+  background: #fff;
+  border: 1px solid #9c9c9c;
+}
+form button {
+  background: grey;
+  padding: 0.7em;
+  border: 0;
+}
+form button:hover {
+  background: green;
+}
+
+label {
+  text-align: right;
+  display: block;
+  padding: 0.5em 1.5em 0.5em 0.5em;
+}
+
+input {
+  width: 100%;
+  padding: 0.7em;
+  margin-bottom: 0.5rem;
+}
+input:focus {
+  outline: 3px solid blue;
+}
+
+@media (min-width: 400px) {
+  form {
+    overflow: hidden;
+  }
+
+  label {
+    float: left;
+    width: 200px;
+  }
+
+  input {
+    float: left;
+    width: calc(100% - 200px);
+  }
+
+  button {
+    float: right;
+    width: calc(100% - 200px);
+  }
+}
+body {
+  background-color:lightblue
+}
+p{ 
+font-weight: bold;
+font-style:italic;
+}
+h1{
+font-weight: bold;
+font-style:italic;
+margin-left: 65px;
+}
