@@ -1,0 +1,81 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1671\cocoasubrtf200
+{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\margl1440\margr1440\vieww10800\viewh8400\viewkind0
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 * \{\
+  box-sizing: border-box;\
+\}\
+form \{\
+  padding: 1em;\
+  background: #f9f9f9;\
+  border: 3px solid #c1c1c1;\
+  margin-top: 2rem;\
+  max-width: 600px;\
+  margin-left: 0px;\
+  margin-right: auto;\
+  padding: 1em;\
+\}\
+form input \{\
+  margin-bottom: 1rem;\
+  background: #fff;\
+  border: 1px solid #9c9c9c;\
+\}\
+form button \{\
+  background: grey;\
+  padding: 0.7em;\
+  border: 0;\
+\}\
+form button:hover \{\
+  background: green;\
+\}\
+\
+label \{\
+  text-align: right;\
+  display: block;\
+  padding: 0.5em 1.5em 0.5em 0.5em;\
+\}\
+\
+input \{\
+  width: 100%;\
+  padding: 0.7em;\
+  margin-bottom: 0.5rem;\
+\}\
+input:focus \{\
+  outline: 3px solid blue;\
+\}\
+\
+@media (min-width: 400px) \{\
+  form \{\
+    overflow: hidden;\
+  \}\
+\
+  label \{\
+    float: left;\
+    width: 200px;\
+  \}\
+\
+  input \{\
+    float: left;\
+    width: calc(100% - 200px);\
+  \}\
+\
+  button \{\
+    float: right;\
+    width: calc(100% - 200px);\
+  \}\
+\}\
+body \{\
+  background-color:lightblue\
+\}\
+p\{ \
+font-weight: bold;\
+font-style:italic;\
+\}\
+h1\{\
+font-weight: bold;\
+font-style:italic;\
+margin-left: 65px;\
+\}}
