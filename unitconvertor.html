@@ -1,5 +1,11 @@
 <html>
   <head>
+    <style type="text/css">
+      body { 
+  background-image: linear-gradient(red,orange,yellow,green,blue,indigo,violet);
+  color: white;
+  font-weight: 900
+    </style>
     <title>
     </title>
   </head>
@@ -53,5 +59,104 @@ onChange="CalculateUnit(document.form_A, document.form_B)">
     </div> <!-- Converter-side-b -->
     </div> <!-- Converter-Wrapper -->
  
+    <script>
+      var property = new Array();
+var unit = new Array();
+var factor = new Array();
+
+property[0] = "Length";
+unit[0] = new Array("Meter (m)", "Kilometer (km)", "Foot (ft)", "Inch (in)", "Mile (US)", "Yard (yd)");
+factor[0] = new Array(1, 1000, .3048, .0254, 1852, 0.9144)
+
+function
+UpdateUnitMenu(propMenu,unitMenu){
+  // Updates the unit displayed in teh unitMenu according to the selection of property in teh propMenu.
+  var i;
+  i = propMenu.selectedIndex;
+FillMenuWithArray(unitMenu,unit[i]);
+}
+
+function
+FillMenuWithArray(myMenu,myArray){
+  //Fills the options of myMenu with the elements of myArray
+  var i;
+  myMenu.length = 
+myArray.length;
+  for (i = 0; i <
+myArray.length; i++) {
+    myMenu.options[i].text = 
+myArray[i];
+  }
+}
+
+function
+CalculateUnit(sourceForm,targetForm) { 
+  // A simple function to validate input before making the unit conversion.
+  var sourceValue = 
+sourceForm.unit_input.value;
+  
+    //First check if the user has given numbers or anything that can be made to one...
+  sourceValue = 
+parseFloat(sourceValue);
+  if (!isNaN(sourceValue) ||
+sourceValue == 0){
+   // If we can make a valid floating-point number, put it in the text box and convert!
+    sourceForm.unit_input.value
+=sourceValue;
+    ConvertFromTo(sourceForm,
+targetForm);
+  }
+}
+
+function
+ConvertFromTo(sourceForm,targetForm) {
+  // Converts the contents of the sourceForm input box to the units specified in the targetForm unit menu and puts the result in the targetForm input box.
+  var propIndex;
+  var sourceIndex;
+  var sourceFactor;
+  var targetIndex;
+  var targetFactor;
+  var result;
+
+  // First we check which property we are working in...
+  propIndex = 
+document.property_form.the_menu.selectedIndex;
+  //What unit are we converting FROM (i.e. source) and the factor needed to convert that unit to the base unit. 
+  sourceIndex = 
+sourceForm.unit_menu.selectedIndex;
+  sourceFactor = 
+factor[propIndex][sourceIndex];
+  
+  // Now we check which unit we are converting TO: 
+  targetIndex = 
+targetForm.unit_menu.selectedIndex;
+  targetFactor = 
+factor[propIndex][targetIndex];
+
+  //Now convert the source TO the base unit.
+  
+  result = 
+sourceForm.unit_input.value;
+  result = result * sourceFactor;
+  
+  //Now convert the base unit to the target unit. 
+  
+  result = result/
+targetFactor;
+  
+  targetForm.unit_input.value = result;
+}
+
+window.onload = function(e) {
+
+FillMenuWithArray(document.property_form.the_menu, property);
+  
+UpdateUnitMenu(document.property_form.the_menu,
+document.form_A.unit_menu);
+  
+UpdateUnitMenu(document.property_form.the_menu,
+document.form_B.unit_menu)
+}
+    </script>
   </body>
 </html>
