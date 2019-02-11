@@ -65,8 +65,8 @@
    map:centerofmap
    title: 'House'
    });
-   marker.addListener('click', function() {
-     infowindow.open(centerofmap, housemarker);
+   housemarker.addListener('click', function() {
+   housewindow.open(centerofmap, housemarker);
    });
    
    var schoolmarker = new google.maps.Marker({
@@ -74,8 +74,8 @@
    map:centerofmap
    title: 'School'
    });
-   marker.addListener('click', function() {
-     infowindow.open(centerofmap, schoolmarker);
+   schoolmarker.addListener('click', function() {
+   schoolwindow.open(centerofmap, schoolmarker);
    });
    
    var churchmarker = new google.maps.Marker({
@@ -83,8 +83,8 @@
    map:centerofmap
    title: 'Church'
    });
-   marker.addListener('click', function() {
-     infowindow.open(centerofmap, churchmarker);
+   churchmarker.addListener('click', function() {
+   churchwindow.open(centerofmap, churchmarker);
    });
    
    var hukilaumarker = new google.maps.Marker({
@@ -92,8 +92,8 @@
    map:centerofmap
    title: 'Hukilau'
    });
-   marker.addListener('click', function() {
-     infowindow.open(centerofmap, hukilaumarker);
+   hukilaumarker.addListener('click', function() {
+   hukilauwindow.open(centerofmap, hukilaumarker);
    });
    
    var byuhmarker = new google.maps.Marker({
@@ -101,8 +101,8 @@
    map:centerofmap
    title: 'BYUH'
    });
-   marker.addListener('click', function() {
-     infowindow.open(centerofmap, byuhmarker);
+   byuhmarker.addListener('click', function() {
+   byuhwindow.open(centerofmap, byuhmarker);
    }); 
  }
     </script>
