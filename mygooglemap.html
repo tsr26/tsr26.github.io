@@ -1,22 +1,23 @@
 <html>
-  <head>
+<head>
     <style>
-      #map{
+      #mymap{
         height: 500px;
         height:100%; }
     </style>
     <title>
       Info Windows
     </title>
-  </head>
+</head>
   <body>
-  <h1> Seth Richardson's Google Map </h1>
-  <h2> With Helpful Markers!
-    <div id="map"></div>
-    <script>
- function initMap() {
+    <h1> Seth Richardson's Google Map </h1>
+    <h2> With Helpful Markers!
+<div id="mymap"></div>
+<script>
+function showmap() {
    var centerofmap = new google.maps.Map(document.getElementById('mymap'),{
-     center: {lat: 21.645572, lng: -157.92187}, zoom:15 });
+center: {lat: 21.645572, lng: -157.92187}, 
+zoom:15 });
    
    var house = {lat: 21.64599, lng: -157.927428};
    var school = {lat: 21.6493597, lng: -157.92556};
@@ -44,7 +45,7 @@
    var housemarker = new google.maps.Marker({
    position:house,
    map: centerofmap,
-   title: 'House'
+   title: "House"
    });
    housemarker.addListener('click', function() {
    housewindow.open(centerofmap, housemarker);
@@ -53,7 +54,7 @@
    var schoolmarker = new google.maps.Marker({
    position:school,
    map: centerofmap,
-   title: 'School'
+   title: "School"
    });
    schoolmarker.addListener('click', function() {
    schoolwindow.open(centerofmap, schoolmarker);
@@ -62,7 +63,7 @@
    var churchmarker = new google.maps.Marker({
    position:church,
    map: centerofmap,
-   title: 'Church'
+   title: "Church"
    });
    churchmarker.addListener('click', function() {
    churchwindow.open(centerofmap, churchmarker);
@@ -71,7 +72,7 @@
    var hukilaumarker = new google.maps.Marker({
    position:hukilau,
    map: centerofmap,
-   title: 'Hukilau'
+   title: "Hukilau"
    });
    hukilaumarker.addListener('click', function() {
    hukilauwindow.open(centerofmap, hukilaumarker);
@@ -80,7 +81,7 @@
    var byuhmarker = new google.maps.Marker({
    position:byuh,
    map: centerofmap,
-   title: 'BYUH'
+   title: "BYUH"
    });
    byuhmarker.addListener('click', function() {
    byuhwindow.open(centerofmap, byuhmarker);
