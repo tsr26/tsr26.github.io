@@ -43,12 +43,67 @@
    var byuh = {lat: 21.642442, lng: -157.925247};
                                          
    var houseinfo = '<h1>My House</h1><p>We moved here when I was 7 years old when my dad got a job at BYU-Hawaii teaching Chinese and Spanish. I lived in this triplex up until my mission to South Korea in 2012. Most people that live in Provo have never lived so close to a temple, but as can be seen here, the Laie, HI Temple was basically in my backyard.</p>';
-   var schoolinfo = '
-   var churchinfo                                      
-   var hukilauinfo
-   var byuhinfo
+   var schoolinfo = '<h1>"My" School</h1><p>This isnt really my school because I was homeschooled growing up, but if I had gone to a public elementary school this would have been it. I would sometimes go with my dad and brothers to play on the basketball courts here in the evenings.</p>';
+   var churchinfo = '<h1>Church</h1><p>This church building is affectionately nicknamed the "back chapel" as it was built right behind another church building. Both wards that I grew up attending in Hawaii used this ward building. It actually has a couple of inner courtyards that have open roofs.</p>';
+   var hukilauinfo = '<h1>Hukilau</h1><p>Hukilau is a popular local beach that is well loved by the locals. It it great for swimming and body boarding and is very family friendly. It is close enough to BYU-Hawaii that students could walk here in 5-10 minutes.</p>';
+   var byuhinfo = '<h1>BYU-Hawaii</h1><p>I attended BYU-Hawaii for just over a year before my mission to South Korea. The diversity of people that attend here is incredible! If BYU-H would have had an engineering program I would probably never have left :)</p>';
    
-   var houseinfo = 
+   var housewindow = new google.maps.InfoWindow({
+   content: houseinfo});
+   var schoolwindow = new google.maps.InfoWindow({
+   content: schoolinfo});
+   var churchwindow = new google.maps.InfoWindow({
+   content: churchinfo});
+   var hukilauwindow = new google.maps.InfoWindow({
+   content: hukilauinfo});
+   var byuhwindow = new google.maps.InfoWindow({
+   content: byuhinfo});
+   
+   var housemarker = new google.maps.Marker({
+   position:house,
+   map:centerofmap
+   title: 'House'
+   });
+   marker.addListener('click', function() {
+     infowindow.open(centerofmap, housemarker);
+   });
+   
+   var schoolmarker = new google.maps.Marker({
+   position:school,
+   map:centerofmap
+   title: 'School'
+   });
+   marker.addListener('click', function() {
+     infowindow.open(centerofmap, schoolmarker);
+   });
+   
+   var churchmarker = new google.maps.Marker({
+   position:church,
+   map:centerofmap
+   title: 'Church'
+   });
+   marker.addListener('click', function() {
+     infowindow.open(centerofmap, churchmarker);
+   });
+   
+   var hukilaumarker = new google.maps.Marker({
+   position:hukilau,
+   map:centerofmap
+   title: 'Hukilau'
+   });
+   marker.addListener('click', function() {
+     infowindow.open(centerofmap, hukilaumarker);
+   });
+   
+   var byuhmarker = new google.maps.Marker({
+   position:byuh,
+   map:centerofmap
+   title: 'BYUH'
+   });
+   marker.addListener('click', function() {
+     infowindow.open(centerofmap, byuhmarker);
+   }); 
+ }
     </script>
     <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAXS6eLxCWdf31JokswS3GbO582iuY0PqI&callback=showmap">
     </script>
