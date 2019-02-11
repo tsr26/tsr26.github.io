@@ -32,7 +32,25 @@
   <h2> With Helpful Markers!
     <div id="map"></div>
     <script>
- 
+ function initMap() {
+   var centerofmap = new google.maps.Map(document.getElementById('mymap'),{
+     center: {lat: 21.645572, lng: -157.92187}, zoom:15 });
+   
+   var house = {lat: 21.64599, lng: -157.927428};
+   var school = {lat: 21.6493597, lng: -157.92556};
+   var church = {lat: 21.648922, lng: -157.929783};
+   var hukilau = {lat: 21.652985, lng: -157.927940};
+   var byuh = {lat: 21.642442, lng: -157.925247};
+                                         
+   var houseinfo = '<h1>My House</h1><p>We moved here when I was 7 years old when my dad got a job at BYU-Hawaii teaching Chinese and Spanish. I lived in this triplex up until my mission to South Korea in 2012. Most people that live in Provo have never lived so close to a temple, but as can be seen here, the Laie, HI Temple was basically in my backyard.</p>';
+   var schoolinfo = '
+   var churchinfo                                      
+   var hukilauinfo
+   var byuhinfo
+   
+   var houseinfo = 
+    </script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAXS6eLxCWdf31JokswS3GbO582iuY0PqI&callback=showmap">
     </script>
   </body>
 </html>
