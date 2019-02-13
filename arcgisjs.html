@@ -11,6 +11,10 @@
         margin: 0;
         padding: 0;
       }
+      body {
+      background-color: lightblue;
+      color: blue;
+      }
     </style>
     <script src="https://js.arcgis.com/3.27/"></script>
     <script>
@@ -18,7 +22,7 @@
 
       require(["esri/map", "dojo/domReady!"], function(Map) {
         map = new Map("map", {
-          basemap: "topo",  //For full list of pre-defined basemaps, navigate to http://arcg.is/1JVo6Wd
+          basemap: "satellite",  //For full list of pre-defined basemaps, navigate to http://arcg.is/1JVo6Wd
           center: [-157.9267, 21.645], // longitude, latitude
           zoom: 15
         });
@@ -27,6 +31,8 @@
   </head>
 
   <body>
+    <h3>Seth's ArcGIS Javascript Map</h3>
+    <h4>Aloha Visitors!</h4>
     <div id="map"></div>
   </body>
 </html>
