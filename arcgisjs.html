@@ -74,15 +74,27 @@
         };
         var m2s = "My family visited here last summer and thought is was very beautiful. I would like to see it myself." + "<img src=https://www.google.com/search?q=grand+prismatic+spring&safe=strict&client=firefox-b-1-d&source=lnms&tbm=isch&sa=X&ved=0ahUKEwi1--LbtcjgAhWKwFQKHdWTD_UQ_AUIDigB&biw=643&bih=681#imgrc=KihV6vx4a1Tp7M:>";
         var m2g = new Graphic({
-          geometry:m1
+          geometry:m2
           symbol: sms,
           popupTemplate: {
-            title: "Austin, Texas",
-            content: m1s,
+            title: "Grand Prismatic Spring",
+            content: m2s,
                }
              });
       //Grand Canyon
-        
+        var m3 = {
+          type: "multipoint",
+          points: maparray[2]
+        };
+        var m3s = "My family visited here last summer and thought is was very beautiful. I would like to see it myself." + "<img src=https://www.google.com/search?q=grand+prismatic+spring&safe=strict&client=firefox-b-1-d&source=lnms&tbm=isch&sa=X&ved=0ahUKEwi1--LbtcjgAhWKwFQKHdWTD_UQ_AUIDigB&biw=643&bih=681#imgrc=KihV6vx4a1Tp7M:>";
+        var m3g = new Graphic({
+          geometry:m3
+          symbol: sms,
+          popupTemplate: {
+            title: "Austin, Texas",
+            content: m3s,
+               }
+             });
       //Santarem, Brazil
         
       //Blue House
