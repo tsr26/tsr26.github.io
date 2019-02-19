@@ -89,25 +89,117 @@
           geometry:m3
           symbol: sms,
           popupTemplate: {
-            title: "Austin, Texas",
+            title: "Grand Canyon",
             content: m3s,
                }
              });
+        
       //Santarem, Brazil
+        var m4 = {
+          type: "multipoint",
+          points: maparray[3]
+        };
+        var m4s = "My family visited here last summer and thought is was very beautiful. I would like to see it myself." + "<img src=https://www.google.com/search?q=grand+prismatic+spring&safe=strict&client=firefox-b-1-d&source=lnms&tbm=isch&sa=X&ved=0ahUKEwi1--LbtcjgAhWKwFQKHdWTD_UQ_AUIDigB&biw=643&bih=681#imgrc=KihV6vx4a1Tp7M:>";
+        var m4g = new Graphic({
+          geometry:m4
+          symbol: sms,
+          popupTemplate: {
+            title: "Santarem, Brazil",
+            content: m4s,
+               }
+             });
         
       //Blue House
+        var m5 = {
+          type: "multipoint",
+          points: maparray[4]
+        };
+        var m5s = "My family visited here last summer and thought is was very beautiful. I would like to see it myself." + "<img src=https://www.google.com/search?q=grand+prismatic+spring&safe=strict&client=firefox-b-1-d&source=lnms&tbm=isch&sa=X&ved=0ahUKEwi1--LbtcjgAhWKwFQKHdWTD_UQ_AUIDigB&biw=643&bih=681#imgrc=KihV6vx4a1Tp7M:>";
+        var m5g = new Graphic({
+          geometry:m5
+          symbol: sms,
+          popupTemplate: {
+            title: "Blue House",
+            content: m5s,
+               }
+             });
         
       //Gyeong-ju
+        var m6 = {
+          type: "multipoint",
+          points: maparray[5]
+        };
+        var m6s = "My family visited here last summer and thought is was very beautiful. I would like to see it myself." + "<img src=https://www.google.com/search?q=grand+prismatic+spring&safe=strict&client=firefox-b-1-d&source=lnms&tbm=isch&sa=X&ved=0ahUKEwi1--LbtcjgAhWKwFQKHdWTD_UQ_AUIDigB&biw=643&bih=681#imgrc=KihV6vx4a1Tp7M:>";
+        var m6g = new Graphic({
+          geometry:m6
+          symbol: sms,
+          popupTemplate: {
+            title: "Gyeong-ju",
+            content: m6s,
+               }
+             });
         
       //Mount of Olives
+        var m7 = {
+          type: "multipoint",
+          points: maparray[6]
+        };
+        var m7s = "My family visited here last summer and thought is was very beautiful. I would like to see it myself." + "<img src=https://www.google.com/search?q=grand+prismatic+spring&safe=strict&client=firefox-b-1-d&source=lnms&tbm=isch&sa=X&ved=0ahUKEwi1--LbtcjgAhWKwFQKHdWTD_UQ_AUIDigB&biw=643&bih=681#imgrc=KihV6vx4a1Tp7M:>";
+        var m7g = new Graphic({
+          geometry:m7
+          symbol: sms,
+          popupTemplate: {
+            title: "Mount of Olives",
+            content: m7s,
+               }
+             });
         
       //The Hill Cumorah
+        var m8 = {
+          type: "multipoint",
+          points: maparray[7]
+        };
+        var m8s = "My family visited here last summer and thought is was very beautiful. I would like to see it myself." + "<img src=https://www.google.com/search?q=grand+prismatic+spring&safe=strict&client=firefox-b-1-d&source=lnms&tbm=isch&sa=X&ved=0ahUKEwi1--LbtcjgAhWKwFQKHdWTD_UQ_AUIDigB&biw=643&bih=681#imgrc=KihV6vx4a1Tp7M:>";
+        var m8g = new Graphic({
+          geometry:m8
+          symbol: sms,
+          popupTemplate: {
+            title: "The Hill Cumorah",
+            content: m8s,
+               }
+             });
         
       //Rome Temple
+        var m9 = {
+          type: "multipoint",
+          points: maparray[8]
+        };
+        var m9s = "My family visited here last summer and thought is was very beautiful. I would like to see it myself." + "<img src=https://www.google.com/search?q=grand+prismatic+spring&safe=strict&client=firefox-b-1-d&source=lnms&tbm=isch&sa=X&ved=0ahUKEwi1--LbtcjgAhWKwFQKHdWTD_UQ_AUIDigB&biw=643&bih=681#imgrc=KihV6vx4a1Tp7M:>";
+        var m9g = new Graphic({
+          geometry:m9
+          symbol: sms,
+          popupTemplate: {
+            title: "Rome Temple",
+            content: m9s,
+               }
+             });
         
       //Disneyland
-   
-        view.graphics.addMany([pointGraphic,m1g,m2g]);
+   var m10 = {
+          type: "multipoint",
+          points: maparray[9]
+        };
+        var m10s = "My family visited here last summer and thought is was very beautiful. I would like to see it myself." + "<img src=https://www.google.com/search?q=grand+prismatic+spring&safe=strict&client=firefox-b-1-d&source=lnms&tbm=isch&sa=X&ved=0ahUKEwi1--LbtcjgAhWKwFQKHdWTD_UQ_AUIDigB&biw=643&bih=681#imgrc=KihV6vx4a1Tp7M:>";
+        var m10g = new Graphic({
+          geometry:m10
+          symbol: sms,
+          popupTemplate: {
+            title: "Disneyland",
+            content: m10s,
+               }
+             });
+        
+        view.graphics.addMany([pointGraphic,m1g,m2g,m3g,m4g,m5g,m6g,m7g,m8g,m9g,m10g]);
       });
     </script>
   </head>
