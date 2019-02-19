@@ -20,12 +20,84 @@
     <script>
       var map;
 
-      require(["esri/map", "dojo/domReady!"], function(Map) {
-        map = new Map("map", {
+      require(["esri/map", 
+               "esri/views/MapView",
+               "esri/Graphic"], 
+              function(
+        Map, MapView, Graphic){
+ 
+        var map = new Map({
           basemap: "satellite",
-          center: [-157.9267, 21.645],
-          zoom: 15
         });
+        var map = new MapView({
+          center: [-157.9267, 21.645],
+          container: "viewDiv",
+          map: map,
+          zoom:1
+        });
+        var maparray = [[-97.7534, 30.3077],
+                        [-110.838348, 44.5251],
+                        [-112.1304, 36.0843],
+                        [-2.4605, -54.70649],
+                        [126.9745, 37.5867],
+                        [129.2178, 35.8443],
+                        [35.2281457, 31.777966],
+                        [-77.22615, 43.005443],
+                        [12.5425969, 41.97050],
+                        [-117.9406, 33.82096]];
+        
+        var sms = {
+          type: "simple-marker", 
+          color: black,
+          size: 10
+        };
+                        
+      //Austin Texas
+        var m1 = {
+          type: "multipoint:,
+          points: maparray[0]
+        };
+        var m1s = "I was born here, but I don't remember it at all. It would be fun to visit as an adult." + "<img src='https://www.google.com/search?q=austin+texas&safe=strict&client=firefox-b-1-d&source=lnms&tbm=isch&sa=X&ved=0ahUKEwivy8yvtMjgAhUDx58KHQ_KDgMQ_AUIECgD&biw=696&bih=681#imgrc=yFONx2ILgEim1M:>";
+        var m1g = new Graphic({
+          geometry:m1
+          symbol: sms,
+          popupTemplate: {
+            title: "Austin, Texas",
+            content: m1s,
+               }
+             });
+        
+      //Grand Prismatic Spring
+        var m2 = {
+          type: "multipoint:,
+          points: maparray[1]
+        };
+        var m2s = "My family visited here last summer and thought is was very beautiful. I would like to see it myself." + "<img src=https://www.google.com/search?q=grand+prismatic+spring&safe=strict&client=firefox-b-1-d&source=lnms&tbm=isch&sa=X&ved=0ahUKEwi1--LbtcjgAhWKwFQKHdWTD_UQ_AUIDigB&biw=643&bih=681#imgrc=KihV6vx4a1Tp7M:>";
+        var m2g = new Graphic({
+          geometry:m1
+          symbol: sms,
+          popupTemplate: {
+            title: "Austin, Texas",
+            content: m1s,
+               }
+             });
+      //Grand Canyon
+        
+      //Santarem, Brazil
+        
+      //Blue House
+        
+      //Gyeong-ju
+        
+      //Mount of Olives
+        
+      //The Hill Cumorah
+        
+      //Rome Temple
+        
+      //Disneyland
+   
+        view.graphics.addMany([pointGraphic,m1g,m2g]);
       });
     </script>
   </head>
