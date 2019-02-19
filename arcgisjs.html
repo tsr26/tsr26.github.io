@@ -18,21 +18,20 @@
     </style> 
     <script src="https://js.arcgis.com/4.10/"></script>
     <script>
-      require(["esri/map", 
+      require(["esri/Map", 
                "esri/views/MapView",
                "esri/Graphic"], 
               function(
         Map, MapView, Graphic) {
  
         var map = new Map({
-          basemap: "streets-navigation-vector"
+          basemap: "satellite"
         });
         var view = new MapView({
           container: "viewDiv",
           map: map,
           center: [-157.9267, 21.645],
           zoom:1
-        }
         });
         var maparray = [[-97.7534, 30.3077],
                         [-110.838348, 44.5251],
