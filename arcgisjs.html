@@ -25,13 +25,14 @@
         Map, MapView, Graphic) {
  
         var map = new Map({
-          basemap: "satellite"
+          basemap: "streets-navigation-vector"
         });
         var view = new MapView({
-          center: [-157.9267, 21.645],
           container: "viewDiv",
           map: map,
+          center: [-157.9267, 21.645],
           zoom:1
+        }
         });
         var maparray = [[-97.7534, 30.3077],
                         [-110.838348, 44.5251],
