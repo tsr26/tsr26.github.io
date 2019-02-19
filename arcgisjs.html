@@ -18,18 +18,16 @@
     </style>
     <script src="https://js.arcgis.com/3.27/"></script>
     <script>
-      var map;
-
       require(["esri/map", 
                "esri/views/MapView",
                "esri/Graphic"], 
               function(
-        Map, MapView, Graphic){
+        Map, MapView, Graphic) {
  
         var map = new Map({
           basemap: "satellite",
         });
-        var map = new MapView({
+        var view = new MapView({
           center: [-157.9267, 21.645],
           container: "viewDiv",
           map: map,
@@ -48,7 +46,7 @@
         
         var sms = {
           type: "simple-marker", 
-          color: black,
+          color: "#000000",
           size: 10
         };
                         
@@ -116,7 +114,7 @@
 
   <body>
     <h3>ArcGIS Javascript Map</h3>
-    <h4>Aloha Visitors!</h4>
+    <h4>Visitors Welcome!</h4>
     <p>Assignment 5 - Feb 13, 2019</p>
     <div id="map"></div>
   </body>
